@@ -32,7 +32,7 @@ if Enable_Fix_For_FireClickDetector_and_FireTouchInterest then
           local HRP = Character:FindFirstChild("HumanoidRootPart")
           if HRP then
             local OldCF = HRP.CFrame
-            HRP.CFrame = Detector.CFrame
+            HRP.Position = Detector.Position
             HRP.CFrame = OldCF
             return print("Fireclickdetector")
           end

@@ -12,8 +12,8 @@ getgenv().GubVersion = "6.0";
 if specialisedrequest ~= nil then
     local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/mooncores/lib/d74663634965be19c972f137bcf683194362be28/notif.lua"))()
     Notify:Notification("GrubHub V6", "Please wait while we check your authentication...", 5, Color3.fromRGB(255, 255, 255))
-    
-    local Response = specialisedrequest({Url = 'http://localhost:3000/api/v6/getscript',Method = 'POST',Headers = {["Content-Type"] = "application/json"},Body = game:GetService("HttpService"):JSONEncode({['key'] = Key})})
+
+    local Response = specialisedrequest({Url = ' https://grubhubscripts.com/api/v6/getscript',Method = 'POST',Headers = {["Content-Type"] = "application/json"},Body = game:GetService("HttpService"):JSONEncode({['key'] = Key})})
     
     if Response.Body ~= "Auth Failed" and Response.Body ~= "" then
         Notify:Notification("GrubHub V6", "Authentication success!", 5, Color3.fromRGB(255, 255, 255))
